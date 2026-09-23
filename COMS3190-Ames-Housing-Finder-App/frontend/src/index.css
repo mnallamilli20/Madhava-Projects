@@ -1,0 +1,90 @@
+:root {
+  color: #172033;
+  background-color: #f5f7fb;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  min-width: 320px;
+}
+
+.app-shell {
+  background: #f5f7fb;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #f8fbff 0%, #eaf2ff 55%, #fff 100%);
+  border-bottom: 1px solid #e3e8f0;
+}
+
+.eyebrow {
+  color: #3157c7;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.metric-box {
+  background: #ffffff;
+  border: 1px solid #e3e8f0;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 1.25rem rgba(15, 23, 42, 0.06);
+}
+
+.metric-box span {
+  display: block;
+  color: #172033;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.metric-box small {
+  color: #6c7485;
+  font-weight: 600;
+}
+
+.stat-pill {
+  display: block;
+  background: #f5f7fb;
+  border: 1px solid #e3e8f0;
+  border-radius: 999px;
+  padding: 0.4rem 0.65rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.listing-card,
+.compare-card,
+.summary-card {
+  border-radius: 1rem;
+}
+
+.team-card {
+  background: #f5f7fb;
+  border: 1px solid #e3e8f0;
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+
+.nav-link.active {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.btn {
+  border-radius: 0.7rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0.7rem;
+}
