@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootScheduleDifficulty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnBackScheduleDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/tvScheduleDifficultyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Schedule Builder"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etScheduleName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter schedule name"
+        android:layout_marginTop="12dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actvCoursePicker"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:hint="Select a course" />
+
+    <Button
+        android:id="@+id/btnAddSelectedCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Course"
+        android:layout_marginTop="8dp" />
+
+    <ListView
+        android:id="@+id/listSelectedCourses"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnCalculateScheduleDifficulty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Difficulty"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvScheduleDifficultyResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Average Schedule Difficulty:"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnSaveSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Schedule"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnViewSavedSchedules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Saved Schedules"
+        android:layout_marginTop="12dp" />
+
+
+</LinearLayout>

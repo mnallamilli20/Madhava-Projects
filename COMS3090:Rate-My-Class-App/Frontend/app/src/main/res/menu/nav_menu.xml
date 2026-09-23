@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@android:drawable/ic_menu_compass"
+            android:title="Home"/>
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Profile"/>
+
+        <item
+            android:id="@+id/nav_claims"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="Submit a Claim"/>
+    </group>
+
+    <item android:title="Management">
+        <menu>
+            <item
+                android:id="@+id/nav_admin"
+                android:icon="@android:drawable/ic_menu_manage"
+                android:title="Manage Claims"
+                android:visible="false"/>
+
+            <item
+                android:id="@+id/nav_university_owner"
+                android:icon="@android:drawable/ic_menu_edit"
+                android:title="Manage University"
+                android:visible="false"/>
+
+        </menu>
+    </item>
+
+    <item android:title="Account">
+
+        <menu>
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@android:drawable/ic_lock_lock"
+                android:title="Login"/>
+            <item
+                android:id="@+id/nav_signup"
+                android:icon="@android:drawable/ic_input_add"
+                android:title="Sign Up"/>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Logout"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnBackFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/tvFlagTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flag Review"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvFlagReviewInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review info"
+        android:layout_marginTop="12dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actvFlagReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select reason"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etFlagDescription"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Explain why you are reporting this review"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnSubmitFlag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Flag"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

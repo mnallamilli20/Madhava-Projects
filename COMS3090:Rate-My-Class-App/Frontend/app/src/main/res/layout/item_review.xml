@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:background="@color/review_card_background">
+
+    <TextView
+        android:id="@+id/tvItemUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Username"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvItemCreatedOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Created On"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvItemOverall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overall: 0/5"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvItemDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Difficulty: 0/5"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvItemWorkload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workload: 0/5"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvItemRecommendation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommended"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvItemGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grade"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvItemComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comment"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvItemLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Likes"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvItemDislikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dislikes"
+        android:layout_marginTop="4dp" />
+
+    <!-- Like / Dislike row -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Like" />
+
+        <Button
+            android:id="@+id/btnDislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Dislike" />
+
+    </LinearLayout>
+
+    <!-- Flag / Delete row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnFlagReview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Flag Review" />
+
+        <Button
+            android:id="@+id/btnDeleteReview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Delete Review" />
+
+    </LinearLayout>
+
+</LinearLayout>

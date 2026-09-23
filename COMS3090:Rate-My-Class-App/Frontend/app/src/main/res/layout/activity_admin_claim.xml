@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".AdminClaimActivity">
+
+    <LinearLayout
+        android:id="@+id/contentArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#89CFF0"
+            app:title="Manage Claims"
+            app:titleTextColor="#FFFFFF"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <!-- tab row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:elevation="2dp">
+            
+            <Button
+                android:id="@+id/btnTabClaims"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Claims"
+                android:textColor="#89CFF0"
+                android:backgroundTint="#FFFFFF"
+                android:textSize="14sp"
+                android:stateListAnimator="@null"/>
+            
+            <Button
+                android:id="@+id/btnTabFlags"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Review Flags"
+                android:textColor="#89CFF0"
+                android:backgroundTint="#FFFFFF"
+                android:textSize="14sp"
+                android:stateListAnimator="@null"/>
+        </LinearLayout>
+        
+        <!-- scrollable -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                
+                <!-- claims panel -->
+                <LinearLayout
+                    android:id="@+id/panelClaims"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                <!-- search bar -->
+                <EditText
+                    android:id="@+id/etSearchClaims"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Search by username, type, or ID..."
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- status filter label -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Filter by Status"
+                    android:textSize="13sp"
+                    android:textColor="#555555"
+                    android:layout_marginBottom="4dp"/>
+
+                <!-- status dropdown -->
+                <AutoCompleteTextView
+                    android:id="@+id/actvStatusFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Select Status"
+                    android:padding="10dp"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_marginBottom="14dp"/>
+
+                <!-- claims list label -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Claims"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#555555"
+                    android:layout_marginBottom="6dp"/>
+
+                <!-- claims list -->
+                <ListView
+                    android:id="@+id/lvClaims"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:divider="#FFFFFF"
+                    android:dividerHeight="1dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginBottom="14dp"/>
+
+                <!-- selected claim details -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Claim Details"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#555555"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvSelectedClaimDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="140dp"
+                    android:text="Select claim above to see details"
+                    android:padding="14dp"
+                    android:gravity="top|start"
+                    android:background="#FFFFFF"
+                    android:textColor="#555555"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_marginBottom="14dp"/>
+
+                <!-- action buttons row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <Button
+                        android:id="@+id/btnResolveClaim"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Resolve"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#89CFF0"
+                        android:layout_marginEnd="8dp"/>
+
+                    <Button
+                        android:id="@+id/btnDeleteClaim"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Delete"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#89CFF0"/>
+                </LinearLayout>
+
+                <!-- action result -->
+                <TextView
+                    android:id="@+id/tvActionResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="#555555"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp"/>
+                </LinearLayout>
+                
+                <!-- review flags panel -->
+                <LinearLayout
+                    android:id="@+id/panelFlags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    
+                    <!-- flags search bar -->
+                    <EditText
+                        android:id="@+id/etSearchFlags"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Search by user, reason, or review ID"
+                        android:padding="10dp"
+                        android:inputType="text"
+                        android:background="@android:drawable/edit_text"
+                        android:layout_marginBottom="10dp"/>
+                    
+                    <!-- flag status filter label -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Filter by status"
+                        android:textSize="13sp"
+                        android:textColor="#555555"
+                        android:layout_marginBottom="4dp"/>
+                    
+                    <!-- flag status dropdown -->
+                    <AutoCompleteTextView
+                        android:id="@+id/actvFlagStatusFilter"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Select status"
+                        android:padding="10dp"
+                        android:background="@android:drawable/edit_text"
+                        android:layout_marginBottom="14dp"/>
+                    
+                    <!-- flags list label -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Flagged Reviews"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:layout_marginBottom="6dp"/>
+                    
+                    <!-- flags list -->
+                    <ListView
+                        android:id="@+id/lvFlags"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:divider="#FFFFFF"
+                        android:dividerHeight="1dp"
+                        android:background="#FFFFFF"
+                        android:layout_marginBottom="14dp"/>
+                    
+                    <!-- flag details label -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Flag Details"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:layout_marginBottom="6dp"/>
+                    
+                    <!-- flag details -->
+                    <TextView
+                        android:id="@+id/tvSelectedFlagDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="130dp"
+                        android:text="Select a flag to see details"
+                        android:padding="14dp"
+                        android:gravity="top|start"
+                        android:background="#FFFFFF"
+                        android:textColor="#555555"
+                        android:lineSpacingMultiplier="1.4"
+                        android:layout_marginBottom="14dp"/>
+
+                    <!-- flag buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <Button
+                            android:id="@+id/btnDeleteReview"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="Delete Review"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="#89CFF0"
+                            android:layout_marginEnd="8dp"/>
+
+                        <Button
+                            android:id="@+id/btnDismissFlag"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="Dismiss"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="#89CFF0"/>
+                    </LinearLayout>
+
+                    <!-- flag action result -->
+                    <TextView
+                        android:id="@+id/tvFlagActionResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="13sp"
+                        android:textColor="#555555"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp"/>
+                </LinearLayout>
+                    
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- sidebar -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
