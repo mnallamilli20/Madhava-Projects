@@ -1,3 +1,5 @@
+EDIT: Madhava Nallamilli, worked on fronted Courses, Schedules, Notification Websockets, login page, Reviews
+
 # 2_sc_5
 
 
